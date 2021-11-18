@@ -77,7 +77,7 @@ double sumN(double x, int N, double& P)
     double ch = x;
     for (i = 0; i != N; i++)
     {
-        f = ch / y;
+        f = ch / y; 
         y += 2;
         sum += f;
         ch *= x * x;
