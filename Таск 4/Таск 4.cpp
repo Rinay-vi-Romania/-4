@@ -74,11 +74,13 @@ int main()
 double sumN(double x, int N, double& P)
 {
     y = 1;
+    double ch = x;
     for (i = 0; i != N; i++)
     {
-        f = pow(x, y) / y;
+        f = ch / y;
         y += 2;
         sum += f;
+        ch *= x * x;
     }
     P = F - 2 * sum;
 
@@ -91,11 +93,13 @@ double sumE(double x, double E, int& N)
     y = 1;
     N = 0;
     sum = 0;
+    double ch=x;
     do
     {
-        f = pow(x, y) / y;
+        f = ch / y;
         y += 2;
         sum += f;
+        ch *= x * x;
         P = F - 2 * sum;
         if (E < P)
         {
